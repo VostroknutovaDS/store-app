@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { items } from 'src/app/mock-data';
-import { CardItem } from '../cart/item-interface';
+import { ItemsService } from 'src/app/services/items.service';
+import { CardItem } from '../../item-interface';
 
 @Component({
   selector: 'app-store-grid',
@@ -12,11 +13,11 @@ export class StoreGridComponent implements OnInit {
   data: CardItem[] = [];
   readonly columnNumber = 5;
 
+  constructor(private itemsService: ItemsService) {}
+
   ngOnInit(): void {
-    this.data = items;
+    this.data = this.itemsService.getItems();
   }
 
-  onItemAdd(data: any): void {
-    console.log(data);
-  }
+  onItemAdd(data: any): void {}
 }

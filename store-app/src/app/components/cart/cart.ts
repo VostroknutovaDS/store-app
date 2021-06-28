@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { items } from 'src/app/mock-data';
-import { CardItem } from './item-interface';
+import { CardItem } from '../../item-interface';
 
 @Component({
   selector: 'app-cart',

@@ -1,4 +1,4 @@
-import { CardItem } from './components/cart/item-interface';
+import { CardItem } from './item-interface';
 
 export const items: CardItem[] = [
   { name: 'First', image: '', description: '', cost: 1.2 },
