@@ -13,6 +13,7 @@ import { CartComponent } from './components/cart/cart';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { CardComponent } from './components/card/card';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { CardComponent } from './components/card/card';
     MatButtonModule,
     MatTableModule,
     MatIconModule,
+    StoreModule.forRoot({}, {}),
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { items } from 'src/app/mock-data';
-import { CardItem } from '../../item-interface';
+import { Store } from '@ngrx/store';
+import { CardItem, CardItemInCart } from '../../item-interface';
+import * as fromStore from '../../store/cart.selectors';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-cart',
@@ -8,11 +10,18 @@ import { CardItem } from '../../item-interface';
   styleUrls: ['./cart.scss'],
 })
 export class CartComponent implements OnInit {
-  data: (CardItem & { number: number })[];
+  data: CardItemInCart[];
   readonly columns = ['name', 'number', 'cost'];
 
+  constructor(private store: Store<CardItem[]>) {}
+
   ngOnInit(): void {
-    this.data = items.map((x) => ({ ...x, number: 1 }));
+    this.store
+      .select(fromStore.selectItemsInCart)
+      .pipe(take(1))
+      .subscribe((data) => {
+        this.data = data;
+      });
   }
 
   getTotalCost(): number {
