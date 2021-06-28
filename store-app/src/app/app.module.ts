@@ -12,9 +12,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { CartComponent } from './components/cart/cart';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
+import { CardComponent } from './components/card/card';
 
 @NgModule({
-  declarations: [AppComponent, StoreGridComponent, CartComponent],
+  declarations: [
+    AppComponent,
+    StoreGridComponent,
+    CartComponent,
+    CardComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

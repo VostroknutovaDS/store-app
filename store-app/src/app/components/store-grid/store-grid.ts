@@ -11,9 +11,12 @@ import { CardItem } from '../cart/item-interface';
 export class StoreGridComponent implements OnInit {
   data: CardItem[] = [];
   readonly columnNumber = 5;
-  readonly placeholderImg = '../../../assets/img/placeholder-img.png';
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.data = items;
+  }
+
+  onItemAdd(data: any): void {
+    console.log(data);
   }
 }
