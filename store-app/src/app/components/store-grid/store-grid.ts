@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { items } from 'src/app/mock-data';
-import { CardItem } from '../item/item-interface';
+import { CardItem } from '../cart/item-interface';
 
 @Component({
   selector: 'app-store-grid',

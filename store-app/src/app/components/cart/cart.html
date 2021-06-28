@@ -1,0 +1,26 @@
+<div class="table-container">
+  <button mat-flat-button color="accent" [routerLink]="['']">Return</button>
+  <table mat-table [dataSource]="data">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Item</th>
+      <td mat-cell *matCellDef="let row">{{row.name}}</td>
+      <td mat-footer-cell *matFooterCellDef>Total</td>
+    </ng-container>
+
+    <ng-container matColumnDef="cost">
+      <th mat-header-cell *matHeaderCellDef>Cost</th>
+      <td mat-cell *matCellDef="let row">{{row.cost}}</td>
+      <td mat-footer-cell *matFooterCellDef>{{getTotalCost()}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="number">
+      <th mat-header-cell *matHeaderCellDef>Number</th>
+      <td mat-cell *matCellDef="let row">{{row.number}}</td>
+      <td mat-footer-cell *matFooterCellDef></td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns"></tr>
+    <tr mat-row *matRowDef="let row; columns: columns;"></tr>
+    <tr mat-footer-row *matFooterRowDef="columns"></tr>
+  </table>
+</div>

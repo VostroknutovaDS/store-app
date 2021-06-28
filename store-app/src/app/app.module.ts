@@ -9,9 +9,12 @@ import { MatGridListModule, MatGridTile } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { CartComponent } from './components/cart/cart';
+import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
-  declarations: [AppComponent, StoreGridComponent],
+  declarations: [AppComponent, StoreGridComponent, CartComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -20,6 +23,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatCardModule,
     MatToolbarModule,
     MatButtonModule,
+    MatTableModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

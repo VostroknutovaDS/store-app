@@ -1,10 +1,10 @@
-import { CardItem } from './components/item/item-interface';
+import { CardItem } from './components/cart/item-interface';
 
 export const items: CardItem[] = [
-  { name: 'First', image: '', description: '' },
-  { name: 'Second', image: '', description: '' },
-  { name: 'Third', image: '', description: '' },
-  { name: 'Fourth', image: '', description: '' },
-  { name: 'Fifth', image: '', description: '' },
-  { name: 'Sixth', image: '', description: '' },
+  { name: 'First', image: '', description: '', cost: 1.2 },
+  { name: 'Second', image: '', description: '', cost: 1.2 },
+  { name: 'Third', image: '', description: '', cost: 1.2 },
+  { name: 'Fourth', image: '', description: '', cost: 1.2 },
+  { name: 'Fifth', image: '', description: '', cost: 1.2 },
+  { name: 'Sixth', image: '', description: '', cost: 1.2 },
 ];

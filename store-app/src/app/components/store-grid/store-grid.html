@@ -1,6 +1,6 @@
-<mat-toolbar
-  ><span class="toolbar-title">Fabulous store!</span>
-  <button mat-icon-button>Cart</button>
+<mat-toolbar>
+  <span class="toolbar-title">Fabulous store!</span>
+  <button mat-flat-button color="accent" [routerLink]="['/cart']">Cart</button>
 </mat-toolbar>
 <mat-grid-list [cols]="columnNumber">
   <mat-grid-tile *ngFor="let item of data">

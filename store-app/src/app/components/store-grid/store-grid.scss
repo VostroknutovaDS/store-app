@@ -1,5 +1,10 @@
-mat-toolbar::ng-deep .toolbar-title {
-  margin-right: auto;
+@import "../../../scss/constants.scss";
+
+mat-toolbar {
+  margin-bottom: $gutter;
+  ::ng-deep .toolbar-title {
+    margin-right: auto;
+  }
 }
 
 mat-card {

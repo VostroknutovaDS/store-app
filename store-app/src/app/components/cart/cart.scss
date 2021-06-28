@@ -1,0 +1,29 @@
+@import "../../../scss/constants.scss";
+
+table {
+  width: 100%;
+
+  tr.mat-footer-row {
+    font-weight: bold;
+  }
+
+  .mat-column-number,
+  .mat-column-cost {
+    width: 70px;
+  }
+}
+
+.table-container {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  button {
+    margin-bottom: 2 * $gutter;
+  }
+}
