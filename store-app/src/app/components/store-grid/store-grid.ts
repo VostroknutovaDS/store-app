@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { items } from 'src/app/mock-data';
 import { ItemsService } from 'src/app/services/items.service';
 import { CardItem } from '../../item-interface';
-import * as fromStore from '../../store/cart.actions';
+import * as fromStore from '../../store/actions/cart.actions';
 
 @Component({
   selector: 'app-store-grid',

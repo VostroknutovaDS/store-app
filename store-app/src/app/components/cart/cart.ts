@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { CardItem, CardItemInCart } from '../../item-interface';
-import * as fromStore from '../../store/cart.selectors';
+import * as fromStore from '../../store/selectors/cart.selectors';
 import { take } from 'rxjs/operators';
+import { AppState } from 'src/app/store/reducers';
 
 @Component({
   selector: 'app-cart',
@@ -13,7 +14,7 @@ export class CartComponent implements OnInit {
   data: CardItemInCart[];
   readonly columns = ['name', 'number', 'cost'];
 
-  constructor(private store: Store<CardItem[]>) {}
+  constructor(private store: Store<AppState>) {}
 
   ngOnInit(): void {
     this.store

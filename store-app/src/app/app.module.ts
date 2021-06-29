@@ -14,6 +14,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { CardComponent } from './components/card/card';
 import { StoreModule } from '@ngrx/store';
+import { reducer } from './store/reducers/cart.reducer';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { StoreModule } from '@ngrx/store';
     MatButtonModule,
     MatTableModule,
     MatIconModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot({ cart: reducer }, {}),
   ],
   providers: [],
   bootstrap: [AppComponent],
